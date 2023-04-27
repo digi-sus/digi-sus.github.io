@@ -72,9 +72,9 @@ custom.css and it will override the style in this file. You have been warned! :)
     #CSS VARIBALES
 \*------------------------------------*/
 :root {
-	--global--color-primary   : #32c36c;
-	--global--color-primary-90: rgba(50, 195, 108, 0.9);
-	--global--color-primary-70: rgba(50, 195, 108, 0.7);
+	--global--color-primary   : #21897E;
+	--global--color-primary-90: #3BA99C;
+	--global--color-primary-70: rgba(50, 195, 108, 0.702);
 	--global--color-heading   : #253745;
 	--global--color-secondary : #2b3e4b;
 	--global--color-body      : #9b9b9b;
@@ -2226,8 +2226,8 @@ ul.list-icons li i {
 	right             : 0px;
 	bottom            : 0px;
 	opacity           : 0;
-	width             : 90px;
-	height            : 200px;
+	width             : 50px;
+	height            : 50px;
 	border-radius     : 4px 0 0 0;
 	display           : -webkit-box;
 	display           : -ms-flexbox;
@@ -2416,9 +2416,9 @@ ul.list-icons li i {
 }
 
 .header .navbar-brand .logo {
-	max-width: 100%;
-	width    : 160px;
-	height   : 60px;
+	max-width: 90%;
+	width    : auto;
+	height   : 50px;
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2430,7 +2430,8 @@ ul.list-icons li i {
 
 @media screen and (max-width: 767.98px) {
 	.header .navbar-brand .logo {
-		width: 100px;
+		width: auto;
+		height: 50px
 	}
 }
 
@@ -2483,7 +2484,7 @@ ul.list-icons li i {
 }
 
 .header.header-topbar {
-	height: 150px;
+	height: 100px;
 }
 
 @media screen and (max-width: 991.98px) {
@@ -2501,7 +2502,7 @@ ul.list-icons li i {
 @media screen and (min-width: 992px) {
 	.header.header-topbar .navbar {
 		padding   : 0 0 0 40px;
-		min-height: 100px;
+		min-height: 70px;
 		position  : relative;
 		top       : auto;
 		bottom    : auto;
@@ -6194,7 +6195,7 @@ ul.dropdown-menu>li.has-dropdown>a:before {
 
 .slider .slide {
 	padding-top      : 0;
-	height           : 650px;
+	height           : 850px;
 	display          : -webkit-box;
 	display          : -ms-flexbox;
 	display          : flex;
