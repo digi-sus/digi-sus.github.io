@@ -43,18 +43,18 @@
       ============================
       -->
 
-    <div id="header">
-      <!-- Insert header.html here -->
-      <script>
-        fetch('en/header.html')
-          .then(response => response.text())
-          .then(data => {
-            const headerDiv = document.createElement('div');
-            headerDiv.innerHTML = data.replace(/id="/g, 'id="header_');
-            document.getElementById('header').appendChild(headerDiv);
-          });
-      </script>
-    </div>
+        <div id="header">
+            <!-- Insert header.html here -->
+            <script>
+                fetch('/en/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        const headerDiv = document.createElement('div');
+                        headerDiv.innerHTML = data.replace(/id="/g, 'id="header_');
+                        document.getElementById('header').appendChild(headerDiv);
+                    });
+            </script>
+        </div>
 
     <!-- 
       ============================
