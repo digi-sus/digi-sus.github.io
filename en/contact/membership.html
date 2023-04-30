@@ -255,7 +255,7 @@
         <div id="footer">
             <div id="container"></div>
             <script>
-                fetch('en/footer.html')
+                fetch('/en/footer.html')
                     .then(response => response.text())
                     .then(data => {
                         document.querySelector('#container').innerHTML = data;
@@ -272,10 +272,7 @@
     </div>
     <!--  Footer Scripts==
     -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/assets/js/chosen.jquery.min.js"></script>
     <script src="/assets/js/vendor.js"></script>
     <script src="/assets/js/functions.js"></script>
 </body>
