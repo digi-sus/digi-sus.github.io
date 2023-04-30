@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Membership</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" integrity="sha512-S8tKZCVt9/+os0i+i2GyryAvcL+Oyt1Lnl/Qx0mFhThDStPAlV0mX9yM7V5AV/3q1rY5xr5LZcNzZ1msbAhBCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="col-12 col-md-6">
+    <label class="form-label" for="select-7">Country</label>
+    <select class="form-control chosen-select" id="select-7">
+      <option value="default">Select a country</option>
+    </select>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-4+oX+J+A9Jqz4Ea/3zFv7IPrDmhHe5r5J5hlyT5JZHNiYTlR+iQSmjL9tJCQhx2BE+oJh1V+1gjK61hZVMlMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js" integrity="sha512-t7Vf8h6FKy7VUzfj+Q2xJluhW6YsJSSC/fKP0/VdybI56lz+48GJb46km0Ag+pkPGz0j+TPl+tYcZJdOGR+GwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(function() {
+      // Load the JSON file
+      $.getJSON('/assets/js/world.json', function(data) {
+        // Loop through each country and add an option to the select element
+        $.each(data, function(index, country) {
+          $('#select-7').append($('<option>', {
+            value: country.alpha2,
+            text: country.en
+          }));
+        });
+        // Initialize the Chosen plugin on the select element
+        $('.chosen-select').chosen();
+      });
+    });
+  </script>
+  </div>
+</body>
+</html>
