@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="Ayman Fikry"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="Multi-purpose energy html5 template"/>
+    <title>Contact - DSA</title>
+    <link href="/assets/images/favicon/favicon.png" rel="icon"/>
+    <!--  Fonts ==
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
+    <!--  Stylesheets==
+    -->
+    <link href="/assets/css/vendor.min.css" rel="stylesheet"/>
+    <link href="/assets/css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="dual-ring"></div>
+    </div>
+    <!-- Document Wrapper-->
+    <div class="wrapper clearfix" id="wrapperParallax">
+      <!-- 
+      ============================
+      Header #2
+      ============================
+      -->
+      <div id="header">
+        <!-- Insert header.html here -->
+        <script>
+            fetch('/en/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    const headerDiv = document.createElement('div');
+                    headerDiv.innerHTML = data.replace(/id="/g, 'id="header_');
+                    document.getElementById('header').appendChild(headerDiv);
+                });
+        </script>
+    </div>
+      <!-- End .header-->
+      <!--
+      ============================
+      Module Search
+      ============================
+      -->
+      <div class="module-content module-search-warp">
+        <div class="pos-vertical-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                <form class="form-search">
+                  <input class="form-control" type="text" placeholder="type words then enter"/>
+                  <button></button>
+                </form>
+                <!-- End .form-search -->
+              </div>
+              <!-- End .col-lg-8 -->
+            </div>
+            <!--  End .row-->
+          </div>
+          <!--  End .container-->
+        </div><a class="module-cancel" href="#"><i class="fas fa-times"></i></a>
+        <!-- End .module-cancel-->
+      </div>
+      <!--
+      ============================
+      Google Map Section
+      ============================
+      -->
+
+      <img src="/assets/images/about/geneva3.png" width="100%"></img>
+      <!--
+      <section class="map map-2"> 
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="d-none">our office map</h3>
+            </div>
+          </div>
+        </div>
+        <iframe src="https://maps.google.com/maps?q=Pioneer%20Works&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near" width="600" height="450" style="border:0;"></iframe>
+      </section>
+      
+      ============================
+      Testimonials #5 Section
+      ============================
+      -->
+      <section class="testimonial testimonial-5 bg-overlay bg-overlay-white2">
+        <div class="bg-section"><img src="/assets/images/background/wavy-pattern.png" alt="background"/></div>
+        <div class="container">
+          <div class="contact-panel contact-panel-2">
+            <div class="row">
+              <div class="col-12 col-lg-5 img-card-holder">
+                <div class="img-card img-card-2 bg-overlay bg-overlay-theme">
+                  <div class="bg-section"><img src="/assets/images/contact/2.jpg" alt="image"/></div>
+                  <div class="card-content">
+                    <div class="content-top">
+                        
+                      <p>As a non-profit organization located in Geneva, home to more than 30 international organizations, we leverage our impact on a global scale.</p>
+                      
+                      <a href="#"><i class="energia-arrow-right"></i>Our Mission</a>
+                    </div>
+                    <div class="content-bottom">
+                      <ul class="list-unstyled contact-infos"> 
+                        <li class="contact-info"><i class="energia-phone-Icon"></i>
+                          <p>Phone: <a href="tel:004915905350792">(+49) 15905350792</a></p>
+                        </li>
+                        <li class="contact-info"><i class="energia-location-Icon"></i>
+                          <p>Location: <a href="mailto:info@energia.com">Geneva, Switzerland		</a></p>
+                        </li>
+                        <li class="contact-info"><i class="energia-clock-Icon"></i>
+                          <p>Mon - Fri: 9:00 am - 5:00 pm (CET)	</p>
+                        </li>
+                      </ul><a class="btn btn--white" href="page-about.html">About us <i class="energia-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-7">
+                <div class="contact-card">
+                  <div class="contact-body">
+                    <h5 class="card-heading">get in touch</h5>
+                    <p class="card-desc">The Digital Sustainability Association (DSA) is a non-profit organization based in Geneva, Switzerland that is dedicated to leveraging the power of digital technology to advance sustainability. </p>
+                    <form class="contactForm" method="post" action="/assets/php/contact.php">
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <input class="form-control" type="text" id="contact-name" name="contact-name" placeholder="First-name Last-name" required=""/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input class="form-control" type="text" id="contact-email" name="contact-email" placeholder="Email" required=""/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input class="form-control" type="text" id="contact-phone" name="contact-phone" placeholder="Phone" required=""/>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <select class="form-control" id="select-1">
+                            <option value="default">select your inquiry</option>
+                            <option value="s1">General inquiry</option>
+                            <option value="s2">Membership </option>
+                            <option value="s3">Sponsorship </option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <textarea class="form-control" id="contact-infos" placeholder="additional information" name="contact-infos" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="col-12">
+                          <button class="btn btn--secondary">submit request <i class="energia-arrow-right"></i></button>
+                        </div>
+                        <div class="col-12">
+                          <div class="contact-result"></div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- End .contact-body -->
+                </div>
+              </div>
+            </div>
+            <!-- End .row-->
+          </div>
+          <!-- End .contact-panel-->
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="counters-holder"> 
+                <!-- Start .counter-->
+                <div class="counter counter-3">
+                  <div class="counter-holder">
+                    <div class="counter-num"> <span class="counting" data-counterup-nums="25" data-counterup-beginat="12">25</span></div>
+                    <div class="counter-img">
+                      <div class="bg-section"><img src="/assets/images/counters/1.jpg" alt="image"/></div><i class="flaticon-020-factory"></i>
+                    </div>
+                  </div>
+                  <div class="counter-desc">
+                    <p>Years Of Experience In Sustainability</p>
+                  </div>
+                </div>
+                <!-- End .counter-->
+              </div>
+            </div>
+            <div class="col-12 col-lg-7 offset-lg-1">
+              <div class="heading heading-14"> 
+                <p class="heading-subtitle">Customers Doing it Their Way!</p>
+              </div>
+              <div class="testimonials-holder"> 
+                <div class="carousel owl-carousel testimonials-carousel" data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="false" data-space="0" data-loop="false" data-speed="800">
+                  <div class="testimonial-panel testimonial-panel-2">
+                    <div class="testimonial-body">
+                      <div class="testimonial-content">
+                        <p>Our mission is to promote the responsible use of technology and innovation to create a more sustainable future for our planet. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-panel testimonial-panel-2">
+                    <div class="testimonial-body">
+                      <div class="testimonial-content">
+                        <p>Through our initiatives and partnerships with like-minded organizations, we strive to foster a community of individuals and businesses committed to making a positive impact on the environment and society.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-panel testimonial-panel-2">
+                    <div class="testimonial-body">
+                      <div class="testimonial-content">
+                        <p>Join us in our efforts to build a more sustainable future for generations to come!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-thumbs">
+                <div class="testimonial-thumb active" data-hover="">
+                  <div class="thumb-img"> <img src="/assets/images/testimonial/1.jpg" alt="Testimonial Author"/></div>
+                  <div class="thumb-body"> 
+                    <h6>sami wade</h6>
+                    <p>promina</p>
+                  </div>
+                </div>
+                <div class="testimonial-thumb" data-hover="">
+                  <div class="thumb-img"> <img src="/assets/images/testimonial/2.jpg" alt="Testimonial Author"/></div>
+                  <div class="thumb-body"> 
+                    <h6>john peter</h6>
+                    <p>optima inc</p>
+                  </div>
+                </div>
+                <div class="testimonial-thumb" data-hover="">
+                  <div class="thumb-img"> <img src="/assets/images/testimonial/3.jpg" alt="Testimonial Author"/></div>
+                  <div class="thumb-body"> 
+                    <h6>sony blake</h6>
+                    <p>koira ind</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End .row-->
+        </div>
+        <!-- End .container-->
+      </section>
+      <!--
+      ============================
+      Footer #1
+      ============================
+      -->
+        <div id="footer">
+            <div id="container"></div>
+            <script>
+                fetch('/en/footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#container').innerHTML = data;
+                    });
+            </script>
+        </div>
+      <!--
+      ============================
+      BackToTop #1
+      ============================
+      -->
+      <div class="back-top" id="back-to-top" data-hover=""><i class="energia-arrow-up"></i></div>
+    </div>
+    <!--  Footer Scripts==
+    -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/functions.js"></script>
+  </body>
+</html>
