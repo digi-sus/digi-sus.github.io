@@ -581,11 +581,48 @@
               Video #1 Section
               ============================
               -->
-            <div class="video video-1 bg-overlay bg-overlay-video" id="video-1">
-              <div class="bg-section"><img src="/assets/images/about/long-banner3.png" alt="background" /></div><a
-                class="popup-video btn-video" href="/assets/images/video/Sustainability_shared_by_Zongxu_Xie.mp4"> <i class="fas fa-play"></i><span>click here for the video</span></a>
-              <!-- End .popup-video-->
+              <div class="video video-1 bg-overlay bg-overlay-video" id="video-1">
+                <div class="bg-section"><img src="/assets/images/about/long-banner3.png" alt="background" /></div>
+                <button class="popup-video btn-video" id="play-video-btn"> <i class="fas fa-play"></i><span>click here for the video</span></button>
             </div>
+            
+            <script>
+                var playButton = document.getElementById("play-video-btn");
+                playButton.addEventListener("click", function() {
+                    var videoSrc = "/assets/images/video/Sustainability_shared_by_Zongxu_Xie.mp4";
+                    var iframe = document.createElement("iframe");
+                    iframe.src = videoSrc;
+                    iframe.width = "80%";
+                    var aspectRatio = 4 / 3;
+                    iframe.height = (parseFloat(iframe.width) / aspectRatio) + "%";
+                    iframe.frameborder = "5";
+                    iframe.allowfullscreen = true;
+                    iframe.style.position = "fixed";
+                    iframe.style.top = "50%";
+                    iframe.style.left = "50%";
+                    iframe.style.transform = "translate(-50%, -50%)";
+                    iframe.style.zIndex = "9999";
+                    iframe.style.opacity = "1";
+                    iframe.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+                    document.body.appendChild(iframe);
+                    
+                    var closeButton = document.createElement("button");
+                    closeButton.innerText = "Close the Video";
+                    closeButton.style.position = "fixed";
+                    closeButton.style.top = "80%";
+                    closeButton.style.right = "20%";
+                    closeButton.style.color = "#fff";
+                    closeButton.style.backgroundColor = "green";
+                    closeButton.style.border = "none";
+                    closeButton.style.fontSize = "1.3rem";
+                    closeButton.style.zIndex = "10000";
+                    closeButton.onclick = function() {
+                        document.body.removeChild(iframe);
+                        document.body.removeChild(closeButton);
+                    };
+                    document.body.appendChild(closeButton);
+                });
+            </script>
           </div>
         </div>
         <!-- End .row-->

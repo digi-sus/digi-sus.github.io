@@ -13689,6 +13689,7 @@ ul.dropdown-menu>li.has-dropdown>a:before {
 /*------------------------------------*\
     #Video
 \*------------------------------------*/
+
 .video {
 	position         : relative;
 	border-radius    : 12px;
@@ -13780,6 +13781,12 @@ ul.dropdown-menu>li.has-dropdown>a:before {
 		opacity          : 0;
 	}
 }
+
+
+
+/*----My Own Video----------*/
+
+
 
 /* Custom, iPhone Retina */
 /*------------------------------------*\
