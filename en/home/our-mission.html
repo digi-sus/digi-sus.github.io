@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="Ayman Fikry"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="Multi-purpose energy html5 template"/>
+    <title>Contact - DSA</title>
+    <link href="/assets/images/favicon/favicon2.png" rel="icon"/>
+    <!--  Fonts ==
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
+    <!--  Stylesheets==
+    -->
+    <link href="/assets/css/vendor.min.css" rel="stylesheet"/>
+    <link href="/assets/css/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="dual-ring"></div>
+    </div>
+    <!-- Document Wrapper-->
+    <div class="wrapper clearfix" id="wrapperParallax">
+      <!-- 
+      ============================
+      Header #2
+      ============================
+      -->
+      <div id="header">
+        <!-- Insert header.html here -->
+        <script>
+            fetch('/en/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    const headerDiv = document.createElement('div');
+                    headerDiv.innerHTML = data.replace(/id="/g, 'id="header_');
+                    document.getElementById('header').appendChild(headerDiv);
+                });
+        </script>
+    </div>
+      <!-- End .header-->
+      <!--
+      ============================
+      Module Search
+      ============================
+      -->
+      <div class="module-content module-search-warp">
+        <div class="pos-vertical-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                <form class="form-search">
+                  <input class="form-control" type="text" placeholder="type words then enter"/>
+                  <button></button>
+                </form>
+                <!-- End .form-search -->
+              </div>
+              <!-- End .col-lg-8 -->
+            </div>
+            <!--  End .row-->
+          </div>
+          <!--  End .container-->
+        </div><a class="module-cancel" href="#"><i class="fas fa-times"></i></a>
+        <!-- End .module-cancel-->
+      </div>
+      <!--
+      ============================
+      Google Map Section
+      ============================
+      -->
+
+      <img src="/assets/images/about/mission.png" width="100%"></img>
+      <!--
+      <section class="map map-2"> 
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="d-none">our office map</h3>
+            </div>
+          </div>
+        </div>
+        <iframe src="https://maps.google.com/maps?q=Pioneer%20Works&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near" width="600" height="450" style="border:0;"></iframe>
+      </section>
+      
+      ============================
+      Testimonials #5 Section
+      ============================
+      -->
+      <section class="testimonial testimonial-5 bg-overlay bg-overlay-white2">
+        <div class="bg-section"><img src="/assets/images/background/wavy-pattern.png" alt="background"/></div>
+        <div class="container">
+          <div class="contact-panel contact-panel-2">
+            <h5>"Empowering global individuals and institutions with digital technologies to achieve their sustainable development goals." <br><br>—— DSA Mission</h2> 
+            <div class="row">
+              <div class="col-12 col-lg-5 img-card-holder">
+
+                
+                  <!-- End .contact-body -->
+                </div>
+              </div>
+            </div>
+            <!-- End .row-->
+          </div>
+          <!-- End .contact-panel-->
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="counters-holder"> 
+                <!-- Start .counter-->
+                <div class="counter counter-3">
+                  <div class="counter-holder">
+                    <div class="counter-num"> <span class="counting" data-counterup-nums="7" data-counterup-beginat="1">8</span></div>
+                    <div class="counter-img">
+                      <div class="bg-section"><img src="/assets/images/counters/1.jpg" alt="image"/></div><i class="flaticon-020-factory"></i>
+                    </div>
+                  </div>
+                  <div class="counter-desc">
+                    <p>billions of population on earth demanding a digital and sustainable future</p>
+                  </div>
+                </div>
+                <!-- End .counter-->
+              </div>
+            </div>
+            <div class="col-12 col-lg-7 offset-lg-1">
+              <div class="heading heading-14"> 
+                <p class="heading-subtitle">Our Vision</p>
+              </div>
+              <div class="testimonials-holder"> 
+                <div class="carousel owl-carousel testimonials-carousel" data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="false" data-space="0" data-loop="false" data-speed="800">
+                  <div class="testimonial-panel testimonial-panel-2">
+                    <div class="testimonial-body">
+                      <div class="testimonial-content">
+                        <p>Advancing digital sustainability in global communities through research, education, advocacy, and cooperation</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-thumbs">
+                <div class="testimonial-thumb active" data-hover="">
+                  <div class="thumb-img"> <img src="/assets/images/testimonial/1.jpg" alt="Testimonial Author"/></div>
+                  <div class="thumb-body"> 
+                    <h6>DSA</h6>
+                    <p>Digital Sustainability Associaiton</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End .row-->
+        </div>
+        <!-- End .container-->
+      </section>
+      <!--
+      ============================
+      Footer #1
+      ============================
+      -->
+        <div id="footer">
+            <div id="container"></div>
+            <script>
+                fetch('/en/footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('#container').innerHTML = data;
+                    });
+            </script>
+        </div>
+      <!--
+      ============================
+      BackToTop #1
+      ============================
+      -->
+      <div class="back-top" id="back-to-top" data-hover=""><i class="energia-arrow-up"></i></div>
+    </div>
+    <!--  Footer Scripts==
+    -->
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/functions.js"></script>
+  </body>
+</html>
